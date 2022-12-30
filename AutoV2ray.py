@@ -55,7 +55,7 @@ def mac_find_fast_server():
             avrs.append(float(a))
             print(f"{i} {color_green}OK{color_reset}   Speed:{color_yellow} {a} {color_reset}ms")
         else:
-            print(f"{i} {color_red} Not Working!")
+            print(f"{i} {color_red} Not Working!{color_reset}")
             list_server.remove(i)
     print(color_reset)
 
@@ -187,7 +187,7 @@ def linux_find_fast_server():
 			print(f"{i} {color_green} work! {color_reset} speed: {color_yellow} {get_avr} {color_reset}")
 
 		else:
-			print(f"{i} {color_red}not work")
+			print(f"{i} {color_red}not work{color_reset}")
 			list_server.remove(i)
 	print(color_reset)
 	global linux_fast_server
@@ -325,7 +325,7 @@ def linux_stop():
 	if linux_cmd_status(f"ls {main_path}/pid {go_null}") == 0:
 		os.system(f"kill $(cat {main_path}/pid)")
 		os.system(f"rm {main_path}/pid")
-		print(f"{color_red}Stoppedd{color_reset}")
+		print(f"{color_red}Stopped{color_reset}")
 	else:
 		print(f"{color_red}script already not running{color_reset}")
 
