@@ -260,7 +260,7 @@ def linux_depends():
 
 	if linux_cmd_status(f"ls {main_path} {go_null}") == 1:
 		os.mkdir(main_path)
-	need = ("wget", "git", "unzip")
+	need = ("wget", "unzip")
 	for i in need:
 		linux_pkg_mgrs(i)
 
