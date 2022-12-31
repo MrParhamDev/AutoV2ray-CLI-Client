@@ -22,7 +22,7 @@ If the Script Works Correctly, After Executing the Command Below, You should Rec
  ```bash
  python3 AutoV2ray.py help
  ```
- ![Sample](READMIPIC.png)
+ ![Sample](READMEPIC.png)
  
  If You Are running the script for the first time, use the `setall` argument<br>
  Use the `download` argument to Download Dependencies Alone<br>
