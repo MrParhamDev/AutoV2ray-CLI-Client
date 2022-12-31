@@ -15,6 +15,12 @@ This is a Script to install Dependencys and Setup v2ray Configs on Your System
 > `Please run the Script only with Python and avoid Running it Using Addresses`<br>
 > `Please Connected to the Internet when Using the Script`
 
+<br>
+
+# Cloning the Project
+```bash
+git clone https://github.com/MrParhamDev/AutoV2ray
+```
 
 # Usage
 If the Script Works Correctly, After Executing the Command Below, You should Receive such an output
