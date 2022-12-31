@@ -1,4 +1,4 @@
-<h1 align="center"> ‍`AutoV2ray`
+<h1 align="center"> ‍AutoV2ray
 
 # Description
 This is a Script to install Dependencys and Setup v2ray Configs on Your System
