@@ -20,7 +20,7 @@ This is a Script to install Dependencys and Setup v2ray Configs on Your System
 If the Script Works Correctly, After Executing the Command Below, You should Receive such an output
 
  ```bash
- python3 AutoV2ray.py help
+ python3 autov2ray.py help
  ```
  ![Sample](READMEPIC.png)
  
