@@ -76,20 +76,6 @@ def recheckTun2socksZIP():
     else:
         print(f"{color_red}Downloading tun2socks Zip File Failed {color_reset}")
         
-# Unziping the tun2socks Zip File
-def UnzipTun2Socks():
-    arch = subprocess.check_output("uname -p" , shell=True , encoding="utf-8").replace("\n" , "")
-    if arch == "arm":
-        if mac_checkExistDir(f"{main_path}/tun2socks/tun2socks-darwin-arm64") == 0:
-            print(f"{color_red}tun2socks Binery Already exist{color_reset}")
-        else:
-            os.system(f"unzip {main_path}/tun2socks/tun2socks-darwin-arm64.zip &> /dev/null")
-    else:
-        if mac_checkExistDir(f"{main_path}/tun2socks/tun2socks-darwin-amd64") == 0:
-            print(f"{color_red}tun2socks Binery Already exist{color_reset}")
-        else:
-            os.system(f"unzip {main_path}/tun2socks/tun2socks-darwin-amd64.zip &> /dev/null")
-
 
 # Running the v2ray
 def mac_run_v2ray():
