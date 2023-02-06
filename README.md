@@ -7,6 +7,17 @@
 This is a Script to install Dependencys and Setup v2ray Configs on Your System <br>
  
  Bug Reports => https://t.me/forfreedominternetgp
+ 
+ # Requirements and packages that will be installed
+| macOS        | GNU / Linux |
+| -----------  | ----------  |
+| Home Brew    | wget        |   
+| wget         | unzip       |
+| unzip        | v2ray core  |
+| v2ray core   |             |
+
+ 
+ 
 # Supported Architectures
 | macOS       | GNU / Linux |
 | ----------- | ----------|
@@ -14,7 +25,16 @@ This is a Script to install Dependencys and Setup v2ray Configs on Your System <
 | amd64       |           |
 
 <br>
+ 
+ 
+# Donation <br>
+> `Dogecoin D9Urw7aVyzgpwiDJ5kcPaqsPi8Yyq2PFL7` <br>
+> `Tether (ERC20) 0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
+> `Solana 7UxTMhRhSmnim6SRZbJWQcfhr3ceYYy3UWKMp6ctL2mn` <br>
+> `Ethereum ‍‍‍‍‍‍0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
 
+<br> 
+ 
 # Script Hints:
 > `Please run Script Without using Root User` <br>
 > `Please run the Script only with Python and avoid Running it Using Addresses`<br>
@@ -34,12 +54,6 @@ If the Script Works Correctly, After Executing the Command Below, You should Rec
  python3 autov2ray.py help
  ```
  
-# Donation <br>
-> `Dogecoin D9Urw7aVyzgpwiDJ5kcPaqsPi8Yyq2PFL7` <br>
-> `Tether (ERC20) 0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
-> `Solana 7UxTMhRhSmnim6SRZbJWQcfhr3ceYYy3UWKMp6ctL2mn` <br>
-> `Ethereum ‍‍‍‍‍‍0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
-
  
  ![Sample](READMEPIC.png)
  
