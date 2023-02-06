@@ -1,4 +1,4 @@
-<h1 align="center"> ‍AutoV2ray <br>
+<h1 align="center"> ‍AutoV2ray CLI Client <br>
  
  
 
