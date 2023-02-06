@@ -1,4 +1,10 @@
 <h1 align="center"> ‍AutoV2ray
+# Donation
+> Dogecoin  `D9Urw7aVyzgpwiDJ5kcPaqsPi8Yyq2PFL7`
+> Tether (ERC20) `0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6`
+> Solana `7UxTMhRhSmnim6SRZbJWQcfhr3ceYYy3UWKMp6ctL2mn`
+> Ethereum ‍‍‍‍‍‍`0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6`
+
 
 # Description
 This is a Script to install Dependencys and Setup v2ray Configs on Your System
