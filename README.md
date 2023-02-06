@@ -55,9 +55,13 @@ git clone https://github.com/MrParhamDev/AutoV2ray
 If the Script Works Correctly, After Executing the Command Below, You should Receive such an output
 
  ```bash
- python3 autov2ray.py help
+ python3 autoV2ray.py help
  ```
- 
+ ## or
+If you want having an easier life run ```script.sh``` then you can run autoV2ray.py like this
+```bash
+ autoV2ray help
+ ```
  
  ![Sample](READMEPIC.png)
  
