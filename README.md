@@ -31,6 +31,14 @@ If the Script Works Correctly, After Executing the Command Below, You should Rec
  ```bash
  python3 autov2ray.py help
  ```
+ 
+# Donation <br>
+> `Dogecoin D9Urw7aVyzgpwiDJ5kcPaqsPi8Yyq2PFL7` <br>
+> `Tether (ERC20) 0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
+> `Solana 7UxTMhRhSmnim6SRZbJWQcfhr3ceYYy3UWKMp6ctL2mn` <br>
+> `Ethereum ‍‍‍‍‍‍0x189eF43f2F44d9C147b72d33aaf9881aC3BC58c6` <br>
+
+ 
  ![Sample](READMEPIC.png)
  
  If You Are running the script for the first time, use the `setall` argument<br>
