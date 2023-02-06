@@ -5,6 +5,10 @@
 
 # Description
 This is a Script to install Dependencys and Setup v2ray Configs on Your System <br>
+This script has several default configurations, the speed and operation status of which is the responsibility of the script.
+You can also use the subscription link of your choice.
+ 
+<br>
  
  Bug Reports => https://t.me/forfreedominternetgp
  
