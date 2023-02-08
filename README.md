@@ -10,7 +10,7 @@ You can also use the subscription link of your choice.
  
 <br>
  
- Bug Reports => https://t.me/forfreedominternetgp
+ Bug Reports => mrpackerparham@gmail.com
  
  # Requirements and packages that will be installed
 | macOS        | GNU / Linux |
