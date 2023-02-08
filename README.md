@@ -18,7 +18,7 @@ You can also use the subscription link of your choice.
 | Home Brew    | wget        |   
 | wget         | unzip       |
 | unzip        | v2ray core  |
-| v2ray core   |             |
+| v2ray core   |     git        |
 
  
  
