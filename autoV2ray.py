@@ -446,6 +446,30 @@ def mac_decode_sub(conf_path, conf_file):
 			os.system(f" cat {conf_path}/sub_conf/config_{i}_vless.json | sed 's/\"false\"/false/g' | tee  {conf_path}/sub_conf/config_{i}_vless.json &> /dev/null")
 		
 
+def mac_manual():
+	mac_manual_path = sys.argv[2]
+	# print(f"{color_yellow}example: python3 autoV2ray.py manual {color_reset}{color_bold}path/config.json{color_reset}")
+	subprocess.run(f"bash -c \"v2ray -c {mac_manual_path}\" & ", shell=True, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+	mac_check_manual_run = subprocess.run(f"pgrep v2ray", shell=True, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+	mac_manual_pid = subprocess.check_output(f"pgrep v2ray",shell=True,encoding='utf-8')
+	if mac_check_manual_run.returncode == 0:
+		print(f"{color_green}V2ray Successfully Runned{color_reset}{color_yellow}\tPID: {mac_manual_pid}{color_reset}",end="")
+	else:
+		print(f"{color_red}V2ray Running Error!{color_red}" , end="")
+
+def linux_manual():
+	linux_manual_path = sys.argv[2]
+	# print(f"{color_yellow}example: python3 autoV2ray.py manual {color_reset}{color_bold}path/config.json{color_reset}")
+	subprocess.run(f"bash -c \"{linux_v2ray_dir}/v2ray run -c {linux_manual_path}\" & echo $! > {main_path}/.pid",
+				shell=True,
+				stdout=subprocess.DEVNULL,
+				stderr=subprocess.DEVNULL)
+	linux_check_manual_run = subprocess.run(f"pgrep v2ray", shell=True, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+	linux_manual_pid = subprocess.check_output(f"pgrep v2ray",shell=True,encoding='utf-8')
+	if linux_check_manual_run.returncode == 0:
+		print(f"{color_green}V2ray Successfully Runned{color_reset}{color_yellow}\tPID: {linux_manual_pid}{color_reset}",end="")
+	else:
+		print(f"{color_red}V2ray Running Error!{color_red}" , end="")
 
 
 def find_name(name):
@@ -634,6 +658,7 @@ Setup and Manage System for v2ray Protocol
 \t {color_green}stop{color_reset} : Kill the Script From Process List 
 \t {color_green}setall{color_reset} : Download Dependencies and Running Script in Background 
 \t {color_green}download{color_reset} : just Download Dependencies 
+\t {color_green}manual{color_reset} : Run Manual json config , {color_bold}example :{color_reset} {color_yellow}python3 autoV2ray.py manual file.json {color_reset}
 \t {color_green}help{color_reset} : show this Help Page 
 {color_bold}FILES{color_reset}
 \t {color_yellow}~/Desktop/ProxyProject/*{color_reset}
@@ -734,14 +759,15 @@ if python_version != 3:
 	print("update your python version")
 	exit(1)
 
-
 if len(sys.argv) > 1:
 	arg = sys.argv[1]
 
 	# arguments for Gnu/Linux
 	if sys.platform == "linux":
 		banner()
-		if arg == "help":
+		if arg == "manual":
+			linux_manual()
+		elif arg == "help":
 			help()
 		elif arg == "setall":
 			linux_setall()
@@ -758,7 +784,9 @@ if len(sys.argv) > 1:
 	# arguments for macOS
 	elif sys.platform == "darwin":
 		banner()
-		if arg == "help":
+		if arg == "manual":
+			mac_manual()
+		elif arg == "help":
 			help()
 		elif arg == "download":
 			mac_download()		
