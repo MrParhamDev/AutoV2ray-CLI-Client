@@ -458,19 +458,23 @@ def mac_manual():
 		print(f"{color_red}V2ray Running Error!{color_red}" , end="")
 
 def linux_manual():
+	if len(sys.argv) <= 2:
+		help()
+		return 1
+	
 	linux_manual_path = sys.argv[2]
-	# print(f"{color_yellow}example: python3 autoV2ray.py manual {color_reset}{color_bold}path/config.json{color_reset}")
-	subprocess.run(f"bash -c \"{linux_v2ray_dir}/v2ray run -c {linux_manual_path}\" & echo $! > {main_path}/.pid",
-				shell=True,
-				stdout=subprocess.DEVNULL,
-				stderr=subprocess.DEVNULL)
-	linux_check_manual_run = subprocess.run(f"pgrep v2ray", shell=True, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
-	linux_manual_pid = subprocess.check_output(f"pgrep v2ray",shell=True,encoding='utf-8')
-	if linux_check_manual_run.returncode == 0:
-		print(f"{color_green}V2ray Successfully Runned{color_reset}{color_yellow}\tPID: {linux_manual_pid}{color_reset}",end="")
-	else:
-		print(f"{color_red}V2ray Running Error!{color_red}" , end="")
 
+	if linux_cmd_status(f"ls {main_path}/.pid {go_null}") == 0:
+		print(f"{color_red}v2ray already running{color_reset}")
+	else:
+		subprocess.run(f"bash -c \"{linux_v2ray_dir}/v2ray run -c {linux_manual_path}\" & echo $! > {main_path}/.pid",
+					shell=True,
+					stdout=subprocess.DEVNULL,
+					stderr=subprocess.DEVNULL)
+		if linux_cmd_status(f"ls {main_path}/.pid {go_null}") == 0:
+			print(f"{color_green}V2ray Successfully Runned{color_reset}")
+		else:
+			print(f"{color_red}V2ray Running Error!{color_red}")
 
 def find_name(name):
 	for i in range(len(config_down)):
@@ -706,8 +710,8 @@ def linux_start():
 def linux_stop():
 
 	if linux_cmd_status(f"ls {main_path}/.pid {go_null}") == 0:
-		os.system(f"kill $(cat {main_path}/.pid)")
-		os.system(f"rm {main_path}/.pid")
+		os.system(f"kill $(cat {main_path}/.pid) {go_null}")
+		os.system(f"rm {main_path}/.pid {go_null}")
 		print(f"{color_red}Stopped{color_reset}")
 	else:
 		print(f"{color_red}script already not running{color_reset}")
