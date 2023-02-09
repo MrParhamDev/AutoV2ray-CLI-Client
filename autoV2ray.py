@@ -768,7 +768,6 @@ if len(sys.argv) > 1:
 
 	# arguments for Gnu/Linux
 	if sys.platform == "linux":
-		banner()
 		if arg == "manual":
 			linux_manual()
 		elif arg == "help":
@@ -787,7 +786,6 @@ if len(sys.argv) > 1:
 
 	# arguments for macOS
 	elif sys.platform == "darwin":
-		banner()
 		if arg == "manual":
 			mac_manual()
 		elif arg == "help":
